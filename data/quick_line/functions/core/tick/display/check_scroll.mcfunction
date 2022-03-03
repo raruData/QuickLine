@@ -3,13 +3,13 @@
 # スクロールしているか確認する
 #
 # @output
-#   storage quick_line:temp out
-#       Success : boolean
+#   storage quick_line:temp
+#       out.Success : boolean
 #           スクロールしたか否か
-#       Scroll : string ("left", "right")
+#       out.Scroll : string ("left", "right")
 #           スクロール方向
 #
-# @within function quick_line:core/tick/display/check_condition
+# @within function quick_line:core/tick/display/check_update
 
 #>
 # @private
@@ -23,7 +23,7 @@
     execute store result score @s QuickLine run data get entity @s SelectedItemSlot
     execute store result score $LastSelectedSlot QuickLine run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.LastSelectedSlot
 
-# スロットのスクロール方向を計算
+# スクロール方向を計算
     scoreboard players operation $SelectedSlot QuickLine = @s QuickLine
     scoreboard players operation $SelectedSlot QuickLine -= $LastSelectedSlot QuickLine
 

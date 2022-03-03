@@ -1,11 +1,13 @@
 #> quick_line:api/display
 #
-# 実行者にアクション一覧を表示します
+# 実行者に一覧を表示します
 #
 # @input
 #   storage quick_line:
-#       in : string[]
-#           表示内容
+#       in.id : id[]
+#           項目のid
+#       in.name : TextComponent[]
+#           項目の表示名
 #
 # @api
 
