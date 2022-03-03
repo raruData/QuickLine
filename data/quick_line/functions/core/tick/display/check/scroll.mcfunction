@@ -9,7 +9,7 @@
 #       out : string ("left", "right")
 #           スクロール方向
 #
-# @within function quick_line:core/tick/display/check_scroll
+# @within function quick_line:core/tick/display/check_condition
 
 # OhMyDat
     function #oh_my_dat:please

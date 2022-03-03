@@ -3,7 +3,7 @@
 # 一覧を表示中のプレイヤーに対する処理を行う
 #
 # @within function
-#   quick_line:core/tick/display/check_scroll
+#   quick_line:core/tick/display/check_condition
 #   quick_line:core/display/_
 
 # 表示されるデータをスクロール方向にシフト
@@ -11,7 +11,7 @@
     execute if data storage quick_line:temp {out:"right"} run function quick_line:core/tick/display/data/shift_right
 
 # コールバック
-    function #quick_line:display
+    execute at @s run function #quick_line:display
 
 # タイトルを表示
     title @s times 0 2147483647 0
