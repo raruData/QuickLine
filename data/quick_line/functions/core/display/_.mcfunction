@@ -18,7 +18,7 @@
     data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.Id set from storage quick_line: in.id
 
 # データを初期化
-    function quick_line:core/tick/display/data/update
+    function quick_line:core/display/data/update
 
 # 表示中のプレイヤーに対する処理へ
-    function quick_line:core/tick/display/player
+    function quick_line:core/display/player
