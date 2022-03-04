@@ -22,3 +22,6 @@
 
 # 表示中の一覧を更新
     function quick_line:core/display/update
+
+# リセット
+    data remove storage quick_line: in

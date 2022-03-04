@@ -18,8 +18,8 @@
 
 # 一覧を更新
     title @s times 0 2147483647 0
-    title @s subtitle [{"storage":"quick_line:", "nbt":"in.subtitle[0]", "interpret":true}, {"storage":"quick_line:", "nbt":"in.subtitle[1]", "interpret":true}, {"storage":"quick_line:", "nbt":"in.subtitle[2]", "interpret":true}]
-    title @s title [{"storage":"quick_line:", "nbt":"in.title", "interpret":true}]
+    title @s subtitle [{"storage":"quick_line:", "nbt":"out.subtitle[0]", "interpret":true}, {"storage":"quick_line:", "nbt":"out.subtitle[1]", "interpret":true}, {"storage":"quick_line:", "nbt":"out.subtitle[2]", "interpret":true}]
+    title @s title [{"storage":"quick_line:", "nbt":"out.title", "interpret":true}]
 
 # リセット
-    data remove storage quick_line: in
+    data remove storage quick_line: out

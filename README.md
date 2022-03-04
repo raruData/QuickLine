@@ -44,9 +44,9 @@
 > ```
 
 > **2.** 選択時に呼び出されるファイル内でidを確認し、それぞれの動作を設定します  
-> （ストレージ `quick_line: in` には選択された項目のidが入っています）
+> （ストレージ `quick_line: id` には選択された項目のidが入っています）
 > ```mcfunction
 > #> example:change_gamemode/select
 >
-> execute if data storage quick_line: {in:"Survival"} run ...
+> execute if data storage quick_line: {id:"Survival"} run ...
 > ```
