@@ -21,7 +21,10 @@
 
 # 現在選択中のスロット、最後に選択したスロット を取得
     execute store result score @s QuickLine run data get entity @s SelectedItemSlot
-    execute store result score $LastSelectedSlot QuickLine run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.LastSelectedSlot
+    execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.LastSelectedSlot store result score $LastSelectedSlot QuickLine run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.LastSelectedSlot
+
+# 最後に選択したスロットが未設定であれば現在選択中のスロットを設定する
+    execute unless data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.LastSelectedSlot run scoreboard players operation $LastSelectedSlot QuickLine = @s QuickLine
 
 # スクロール方向を計算
     scoreboard players operation $SelectedSlot QuickLine = @s QuickLine

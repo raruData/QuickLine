@@ -7,7 +7,6 @@
 # タグを削除
     tag @s remove QuickLine.Player
 
-# 表示される一覧を削除する (OhMyDat)
+# QuickLineのデータを全て削除する (OhMyDat)
     function #oh_my_dat:please
-    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.Name
-    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.Id
+    data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine
