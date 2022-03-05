@@ -1,5 +1,5 @@
-#> quick_line:core/cancel/_
-# @within function quick_line:api/cancel
+#> quick_line:core/hide/_
+# @within function quick_line:api/hide
 
 # タイトルを削除
     title @s clear

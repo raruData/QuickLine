@@ -22,7 +22,7 @@
     function quick_line:core/display/data/update
 
 # コールバック
-    execute at @s run function #quick_line:display
+    execute at @s run function #quick_line:pre_update
 
 # 一覧を更新
     title @s times 0 2147483647 0

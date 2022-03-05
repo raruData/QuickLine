@@ -53,13 +53,13 @@ execute if predicate example:on_click run function quick_line:api/select
 
 ### 呼び出し
 ```mcfunction
-function quick_line:api/cancel
+function quick_line:api/hide
 ```
 
 ### 例
 ```mcfunction
 # 実行者が右クリックしていれば一覧を非表示にする
-execute if predicate example:on_click run function quick_line:api/cancel
+execute if predicate example:on_click run function quick_line:api/hide
 ```
 
 ## 項目選択時の動作を設定
@@ -82,11 +82,11 @@ execute if data storage quick_line: {id:"Day"} run ...
 ```
 
 ## 一覧更新前の動作を設定
-1. `data/quick_line/tags/functions/display.json` に、一覧更新前に呼び出されるファイルを追加します
+1. `data/quick_line/tags/functions/pre_update.json` に、一覧更新前に呼び出されるファイルを追加します
 ```json
 {
     "values": [
-        "example:display"
+        "example:pre_update"
     ]
 }
 ```
@@ -95,7 +95,7 @@ execute if data storage quick_line: {id:"Day"} run ...
 `quick_line: out` には更新後に表示されるデータが入っており、直前に表示内容を編集することが可能です
 
 ```mcfunction
-#> example:display
+#> example:pre_update
 
 # "Day" であれば...な処理をする
 execute if data storage quick_line: out{id:"Day"} run ...

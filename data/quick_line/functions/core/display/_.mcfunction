@@ -2,9 +2,9 @@
 #
 # @input
 #   storage quick_line:
-#       in.id : any[]
+#       in.id : List (any)
 #           項目のid
-#       in.name : TextComponent[]
+#       in.name : List (TextComponent)
 #           項目の表示名
 #
 # @within function quick_line:api/display
