@@ -63,7 +63,7 @@ execute if predicate example:on_click run function quick_line:api/cancel
 ```
 
 ## 項目選択時の動作を設定
-1. `data/quick_line/tags/functions/select.json` に、項目が選択された時に呼び出されるファイルを追加します
+1. `data/quick_line/tags/functions/select.json` に、項目選択時に呼び出されるファイルを追加します
 ```json
 {
     "values": [
@@ -73,7 +73,7 @@ execute if predicate example:on_click run function quick_line:api/cancel
 ```
 
 2. 追加したファイル内でそれぞれの動作を設定します  
-この時 `storage quick_line: id` には選択された項目のidが入っており、項目ごとに動作を設定することが可能です
+`quick_line: id` には選択された項目のidが入っており、項目ごとに動作を設定することが可能です
 ```mcfunction
 #> example:time/select
 
@@ -82,7 +82,7 @@ execute if data storage quick_line: {id:"Day"} run ...
 ```
 
 ## 一覧更新前の動作を設定
-1. `data/quick_line/tags/functions/display.json` に、一覧が更新される直前に呼び出されるファイルを追加します
+1. `data/quick_line/tags/functions/display.json` に、一覧更新前に呼び出されるファイルを追加します
 ```json
 {
     "values": [
@@ -92,7 +92,7 @@ execute if data storage quick_line: {id:"Day"} run ...
 ```
 
 2. 追加したファイル内でそれぞれの動作を設定します  
-この時 `storage quick_line: out` には更新後に表示されるデータが入っており、直前に表示内容を編集することが可能です
+`quick_line: out` には更新後に表示されるデータが入っており、直前に表示内容を編集することが可能です
 
 ```mcfunction
 #> example:display
