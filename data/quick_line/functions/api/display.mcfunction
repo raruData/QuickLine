@@ -4,7 +4,7 @@
 #
 # @input
 #   storage quick_line:
-#       in.id : id[]
+#       in.id : any[]
 #           項目のid
 #       in.name : TextComponent[]
 #           項目の表示名
