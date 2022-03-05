@@ -8,6 +8,8 @@
 #           スクロールしたか否か
 #       out.Scroll : string ("left", "right")
 #           スクロール方向
+#       out.ScrollCount : int
+#           スクロール回数
 #
 # @within function quick_line:core/tick/display/check_update
 
@@ -35,6 +37,7 @@
     execute if score $SelectedSlot QuickLine matches 0 run data modify storage quick_line:temp out.Success set value false
     execute unless score $SelectedSlot QuickLine matches 0..4 unless score $SelectedSlot QuickLine matches -8..-5 run data modify storage quick_line:temp out.Scroll set value "left"
     execute unless score $SelectedSlot QuickLine matches 5..8 unless score $SelectedSlot QuickLine matches -4..0 run data modify storage quick_line:temp out.Scroll set value "right"
+    execute store result storage quick_line:temp out.ScrollCount int 1.0 run scoreboard players get $SelectedSlot QuickLine
 
 # 最後に選択したスロットを取得
     execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].QuickLine.LastSelectedSlot int 1.0 run scoreboard players get @s QuickLine

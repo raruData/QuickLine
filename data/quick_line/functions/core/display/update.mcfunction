@@ -6,9 +6,17 @@
 #   quick_line:core/tick/display/check_update
 #   quick_line:core/display/_
 
+#>
+# @within function quick_line:core/display/**
+#declare score_holder $ScrollCount
+
+# 再帰回数を取得
+    execute store result score $ScrollCount QuickLine run data get storage quick_line:temp out.ScrollCount
+
 # 項目をスクロール方向にシフト
     execute if data storage quick_line:temp out{Scroll:"left"} run function quick_line:core/display/data/shift_left
     execute if data storage quick_line:temp out{Scroll:"right"} run function quick_line:core/display/data/shift_right
+    scoreboard players reset $ScrollCount QuickLine
 
 # 一覧のデータを更新
     function quick_line:core/display/data/update
